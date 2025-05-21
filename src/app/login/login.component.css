@@ -1,0 +1,31 @@
+.full-width {
+  width: 100%;
+}
+
+.login-form, .signup-form {
+  max-width: 350px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+}
+
+.signup-link {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.error-message, .signup-message {
+  color:rgb(119, 212, 26);
+  margin-top: 12px;
+  text-align: center;
+}
+
+.signup-btn {
+  background: #86c232 !important;
+  color: #111 !important;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-left: 8px;
+}

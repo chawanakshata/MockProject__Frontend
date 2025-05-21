@@ -1,0 +1,187 @@
+body, .main-content{
+  padding-bottom: 0px; 
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1.5em;
+  font-weight: 550;
+  margin-top: 24px;
+}
+
+.sub-title{
+  font-size: 1.1em;
+  font-weight: 550;
+  margin-bottom: 10px;
+}
+
+.content{
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.file-upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #b2b2b2;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.upload-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.add-photo-container {
+  margin: 16px auto 0 auto;
+  margin-bottom: 60px;
+  width: fit-content; 
+}
+
+.add-photo-btn {
+  background-color: #86c232;
+  color: #000;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 550;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-left: 24px;
+}
+
+.add-photo-btn:hover {
+  background-color: #77b126;
+}
+
+.choose-file-btn {
+  background-color: #e0e0e0;
+  color: #333;
+  border: 1px solid #a7a5a5;
+  border-radius: 4px;
+  padding: 8px 18px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background 0.2s;
+}
+
+.choose-file-btn:hover {
+  background-color: #d1d1d1;
+}
+
+.designation-input {
+  padding: 6px 12px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.name-input {
+  padding: 6px 12px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.selfie-carousel-container {
+    max-width: 30%;
+    max-height: 50%;
+    margin: 40px auto;
+    padding-bottom: 30px;
+  }
+  
+  .carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    max-width: 90%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .team-member-name {
+    margin-top: 12px;
+    font-size: 1.2em;
+    font-weight: 550;
+    color: #a72828;
+    text-align: center;
+  }
+
+  .delete-btn {
+    margin: 18px auto 0 auto;
+    margin-top: 50px;
+    display: block;
+    background: #86c232;
+    color: #000;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 550;
+    transition: background 0.2s;
+  }
+
+  .delete-btn:hover {
+    background: #77b126;
+  }
+
+
+::ng-deep .photo-snackbar .mat-mdc-button {
+  color: #fff !important;
+  background: transparent !important;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+::ng-deep .photo-snackbar .mat-mdc-button:hover,
+::ng-deep .photo-snackbar .mat-mdc-button:focus {
+  background: #559201 !important;
+  color: #fff !important;
+}
+
+
+::ng-deep .photo-snackbar,
+::ng-deep .photo-snackbar .mdc-snackbar__surface {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+ 
+}
+
+::ng-deep .slick-dots {
+  position: relative !important;
+  bottom: 0px !important;
+  margin-top: 1px !important;
+}
+

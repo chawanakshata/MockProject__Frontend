@@ -1,0 +1,556 @@
+body, .main-content {
+  padding-bottom: 50px; 
+  
+}
+
+ .user-list-container, .main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+ .user-card {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  background: #f9f9f9 !important;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+  padding: 10px 10px;
+  margin: 0 0;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+ .user-content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.left-section {
+  flex: 1 1 0;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 30px;
+  padding-left: 6%;
+}
+
+.left-section h3 {
+  text-align: center;
+  width: 100%;
+  margin-top: 1%;
+  margin-bottom: 5px;
+  font-weight: 550;
+  font-size: 1.1em;
+  color: #c62e2e;
+}
+
+mat-tab-group {
+  width: 100%; 
+  font-size: 1.1rem;
+}
+
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4b4b4b;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 24px;
+  
+}
+
+.profile-pic-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.profile-info h2 {
+  font-size: 2.2rem;
+  margin: 0 0 8px 0;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.profile-info p {
+  margin: 0;
+  color: #666;
+  font-size: 1.1em;
+}
+
+.left-section h2 {
+  margin: 10px 0 5px;
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: #333;
+}
+
+.left-section p {
+  margin: 0;
+  font-weight: 550;
+  color: #5a9908;
+}
+
+::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+  color: #111 !important;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+
+/* Tab label text color and background on hover */
+::ng-deep .mat-mdc-tab .mdc-tab__text-label:hover {
+  color: #222629 !important;      /* Green text */
+  background: transparent !important; /* No background color */
+}
+
+/* Active tab underline color */
+::ng-deep .mat-mdc-tab-group .mdc-tab-indicator__content--underline {
+  border-color: #558e00 !important; 
+  background-color: #111 !important; 
+}
+
+::ng-deep .mat-mdc-tab.mdc-tab--active {
+  background-color: #f7f7f7 !important; 
+  color: #fff !important;              
+}
+
+.update-fact-btn {
+  background: #5a871e;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 16px;
+  margin-left: 8px;
+  font-weight: 600;
+  font-size: 0.98em;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(90, 135, 33, 0.08);
+}
+
+.update-fact-btn:hover {
+  background: #8ccd3d;
+}
+
+.cancel-fact-btn {
+  background: #e0e0e0;
+  color: #c62e2e;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 14px;
+  margin-left: 6px;
+  font-weight: 600;
+  font-size: 0.98em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cancel-fact-btn:hover {
+  background: #f8d7da;
+  color: #a71d2a;
+}
+
+.edit-fact-input {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border: 2px solid #5a8721;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1em;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.edit-fact-input:focus {
+  border-color: #49701a;
+  box-shadow: 0 0 0 2px #e0f3c6;
+}
+
+.right-section {
+  flex: 1 1 0;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel {
+  margin-top: 10px;
+  overflow: visible; 
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 40px; 
+}
+
+.carousel-item {
+  text-align: center;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 450px; 
+}
+
+.carousel-image {
+  max-width: 100%; 
+  max-height: 100%;
+  object-fit: cover; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.slick-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex !important;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: auto;
+  background: transparent;
+}
+
+
+.slick-dots li button:before {
+  font-size: 16px;
+  color: #333;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #007bff;
+  opacity: 1;
+}
+
+.facts-list {
+  margin-top: 24px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.fact-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: #dbdcd9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.fact-item button {
+  margin-left: 0px;
+  margin-right: 1px;
+}
+
+.add-fact-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.add-fact-input {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.add-fact-btn {
+  padding: 6px 18px;
+  background: #86c232;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-fact-btn:hover {
+  background: #77b126;
+}
+
+.edit-fact-input {
+  margin-left: 8px;
+  padding: 2px 6px;
+}
+
+.edit-fact-btn, .update-fact-btn, .cancel-fact-btn, .delete-fact-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 2px;
+  transition: background 0.2s;
+  margin-right: 2px;
+}
+
+.edit-fact-btn,
+.delete-fact-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px 2px;
+  font-size: 1.1em;
+  margin: 0;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+.edit-fact-btn:hover,
+.delete-fact-btn:hover {
+  background: #ececec;
+  border-radius: 4px;
+}
+
+.update-fact-btn, .cancel-fact-btn{
+  background: #ececec;
+  padding: 4px;
+}
+
+.edit-fact-btn:hover {
+  background: #ececec;
+  border-radius: 4px;
+}
+
+
+::ng-deep .photo-snackbar .mat-mdc-button {
+  color: #fff !important;
+  background: transparent !important;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+::ng-deep .photo-snackbar .mat-mdc-button:hover,
+::ng-deep .photo-snackbar .mat-mdc-button:focus {
+  background: #559201 !important;
+  color: #fff !important;
+}
+
+
+::ng-deep .photo-snackbar,
+::ng-deep .photo-snackbar .mdc-snackbar__surface {
+  background: #222629 !important;
+  color: #fff !important;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+}
+
+@media (min-width: 1400px) {
+  .carousel {
+    max-width: 520px;
+    min-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 48px;
+  }
+  .carousel-item {
+    height: 600px;
+  }
+  .carousel-image {
+    max-width: 100%;
+    max-height: 600px;
+    min-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+  }
+
+  .user-card,
+  .fact-item,
+  .profile-info h2,
+  .profile-info p,
+  .left-section h3,
+  .left-section h2,
+  .left-section p,
+  .add-fact-btn,
+  .add-fact-input,
+  .mat-tab-group,
+  .mat-tab-label-content {
+    font-size: 1.6rem !important;
+  }
+
+.user-content{
+  padding: 0px;
+}
+
+.left-section{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-left: 5%;
+  gap: 3%;
+  padding-top: 0px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #4b4b4b;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+}
+}
+
+@media (min-width: 1300px){
+  .left-section{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-left: 5%;
+  gap: 4%;
+}
+
+  .user-card,
+  .fact-item,
+  .profile-info h2,
+  .profile-info p,
+  .left-section h3,
+  .left-section h2,
+  .left-section p,
+  .add-fact-btn,
+  .add-fact-input,
+  .mat-tab-group,
+  .mat-tab-label-content {
+    font-size: 1.6rem !important;
+  }
+
+::ng-deep .mat-mdc-tab .mdc-tab__text-label {
+  font-size: 1.7rem !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.profile-info h2{
+  font-size: 2.1rem !important;
+}
+
+.profile-info p{
+  font-size: 2rem !important;
+}
+
+  .carousel {
+    max-width: 500px;
+    min-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 48px;
+  }
+  .carousel-item {
+    height: 580px;
+  }
+  .carousel-image {
+    max-width: 100%;
+    max-height: 600px;
+    min-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+  }
+
+
+}
+
+@media (max-width: 700px) {
+  .user-content {
+    flex-direction: column !important;
+    gap: 18px;
+    padding: 20px;
+  }
+  .left-section,
+  .right-section {
+    max-width: 100%;
+    width: 100%;
+    padding: 8px 0;
+    margin: 0;
+  }
+  .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2%px;
+    text-align: center;
+  }
+  .profile-picture {
+    width: 90px;
+    height: 90px;
+  }
+  .profile-info h2 {
+    font-size: 1.1rem;
+  }
+  .profile-info p {
+    font-size: 0.95rem;
+  }
+  .fact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .add-fact-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+  }
+
+  .right-section {
+    margin-top: 12px;
+  }
+  .carousel,
+  .carousel-item,
+  .carousel-image {
+    max-width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .carousel {
+    max-width: 450px;
+
+  }
+}
