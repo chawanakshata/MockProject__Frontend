@@ -1,6 +1,6 @@
-body, .main-content{
-  padding-bottom: 0px; 
-}
+  body, .main-content{
+    padding-bottom: 0px; 
+  }
 
 .main-title {
   text-align: center;
@@ -55,5 +55,12 @@ body, .main-content{
   margin-top: 1px !important;
 }
  
-
+@media (max-width: 768px) {
+  .selfie-carousel-container {
+    max-width: 55%; /* Adjust width for phones */
+    max-height: 65%; /* Adjust height for phones */
+    margin: 15px auto;
+    padding-bottom: 15px;
+  }
+}
 

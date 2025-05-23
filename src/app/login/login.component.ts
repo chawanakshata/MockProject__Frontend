@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -33,7 +34,7 @@ export class LoginComponent {
   showSignup = false;
   hidePassword = true;
   
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router, private snackBar: MatSnackBar) {}
 
   togglePasswordVisibility() {
     this.hidePassword = !this.hidePassword;
@@ -44,40 +45,6 @@ export class LoginComponent {
   }
 
   // Login method
-// onSubmit() {
-//   this.errorMessage = '';
-//   this.passwordErrorMessage = '';
-//     if (this.isNullOrWhitespace(this.loginData.username) && this.isNullOrWhitespace(this.loginData.password)) {
-//       this.errorMessage = 'Enter username';
-//       this.passwordErrorMessage = 'Enter password';
-//       return;
-//     }
-//     if (this.isNullOrWhitespace(this.loginData.username)) {
-//       this.errorMessage = 'Enter username';
-//       return;
-//     }
-//     if (this.isNullOrWhitespace(this.loginData.password)) {
-//       this.passwordErrorMessage = 'Enter password';
-//       return;
-//     } 
-//   this.isLoading = true;
-//   this.errorMessage = '';
-//   this.passwordErrorMessage = '';
-//   this.http.post('https://localhost:7085/api/Login/authenticate', this.loginData)
-//     .subscribe({
-//       next: (res: any) => {
-//         this.isLoading = false;
-//         this.router.navigate(['/user-list']); // Only on success!
-//         sessionStorage.setItem('username', this.loginData.username);
-//         sessionStorage.setItem('userRole', res.role); // Store the role in session storage
-
-//       },
-//       error: (err) => {
-//         this.isLoading = false;
-//         this.errorMessage = err?.error?.message || 'Invalid username or password.';
-//       }
-//     });
-// }
 onSubmit() {
   this.errorMessage = '';
   this.passwordErrorMessage = '';
@@ -155,6 +122,11 @@ onSubmit() {
         this.signUpErrorMessage = res.message || 'Signup successful!';
         this.showSignup = false;
         sessionStorage.setItem('username', this.signupData.username);
+        this.snackBar.open('Registration successful!', 'Close', {
+          duration: 3000, // Snackbar will be visible for 3 seconds
+          verticalPosition: 'bottom', // Position at the bottom
+          horizontalPosition: 'center', // Center horizontally
+        });
       },
       error: (err) => {
         this.isLoading = false;

@@ -14,12 +14,12 @@ body, .main-content {
  .user-card {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 4%;
   background: #f9f9f9 !important;
   border: 1px solid #ddd;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.08);
-  padding: 10px 10px;
+  padding: 2% 2%;
   margin: 0 0;
   align-items: flex-start;
   justify-content: center;
@@ -125,11 +125,10 @@ mat-tab-group {
   font-size: 1.1em;
 }
 
-
 /* Tab label text color and background on hover */
 ::ng-deep .mat-mdc-tab .mdc-tab__text-label:hover {
-  color: #222629 !important;      /* Green text */
-  background: transparent !important; /* No background color */
+  color: #222629 !important;     
+  background: transparent !important; 
 }
 
 /* Active tab underline color */
@@ -380,32 +379,6 @@ mat-tab-group {
   justify-content: center;
   align-items: center;
   min-height: 450px;
-}
-
-/* Style for disabled buttons */
-button[disabled] {
-  background-color: #d3d3d3 !important; /* Gray background for disabled buttons */
-  color: #808080 !important; /* Gray text for disabled buttons */
-  cursor: not-allowed !important; /* Show "not-allowed" cursor */
-  border: 1px solid #c0c0c0; /* Optional: Add a border for better visibility */
-}
-
-/* Tooltip for disabled buttons */
-button[disabled]:hover::after {
-  content: 'Button disabled'; /* Tooltip text */
-  position: absolute;
-  background-color: #333;
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  top: -30px; /* Position above the button */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  opacity: 1;
-  pointer-events: none;
 }
 
 @media (min-width: 1400px) {

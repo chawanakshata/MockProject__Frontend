@@ -1,9 +1,9 @@
 .navbar {
   display: flex;
-  justify-content: space-between; /* Space between nav-left and nav-right */
-  align-items: center; /* Align items vertically */
+  justify-content: space-between; 
+  align-items: center; 
   background: #222629;
-  padding: 16px 20px; /* Add padding for spacing */
+  padding: 16px 20px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
   position: sticky;
   top: 0;
@@ -12,7 +12,7 @@
 
 .nav-left {
   display: flex;
-  gap: 32px; /* Space between nav links */
+  gap: 27px; 
   justify-content: center;
   margin: 0;
   padding: 0;
@@ -131,51 +131,34 @@
   
 }
 
-@media (max-width: 700px) {
-  .nav-list {
-    flex-direction: column;
-    background: #222629;
-    position: absolute;
-    top: 56px;
-    left: 0;
-    width: 100%;
-    display: none;
-    gap: 0;
-    z-index: 1001;
-    border-bottom: 1px solid #444;
-  }
-  .nav-list.open {
-    display: flex;
-  }
-  .nav-list li {
-    text-align: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #333;
-  }
-  .navbar {
-    position: relative;
-    background: #222629;
-    height: 72px;        
-    display: flex;
-    align-items: center;  
-    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 0;
-  }
+@media (max-width: 768px) {
   .menu-toggle {
-    display: flex;
-    position: absolute;
-    right: 16px;
-    top: 12px;
-    z-index: 1100;
+    display: flex; /* Show the menu toggle button */
   }
 
-  .nav-list li a {
-    display: block;
-    width: 100%;
-    padding: 12px 0;
+  .nav-left {
+    display: none; /* Hide the menu by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background-color: #222629;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-left.show {
+    display: flex; /* Show the menu when toggled */
+  }
+
+  .nav-left a {
+    padding: 10px 0;
+    text-align: left;
+  }
+
+  .nav-right {
+    order: 1; /* Move username and logout to the right */
   }
 }
 
