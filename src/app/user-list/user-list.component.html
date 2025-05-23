@@ -34,7 +34,7 @@
                 <span class="fact-actions">
                 <!-- Shows the edit button (pencil icon) if you are not editing this fact. -->
                 <button
-                  *ngIf="editingFactId !== fact.id"
+                  *ngIf="editingFactId !== fact.id && userRole !== 'viewer'"
                   class="edit-fact-btn"
                   (click)="startEditFact(fact)"
                   title="Edit"
@@ -43,7 +43,7 @@
                 </button>
                 <!-- Shows the delete button if you are not editing this fact. -->
                 <button
-                  *ngIf="editingFactId !== fact.id"
+                  *ngIf="editingFactId !== fact.id && userRole !== 'viewer'"
                   class="delete-fact-btn"
                   (click)="deleteFact(user.id, fact.id)"
                   title="Delete"
@@ -84,13 +84,13 @@
                 />
                 <span class="fact-actions">
                   <button
-                    *ngIf="editingFactId !== fact.id"
+                    *ngIf="editingFactId !== fact.id && userRole !== 'viewer'"
                     class="edit-fact-btn"
                     (click)="startEditFact(fact)"
                     title="Edit"
                   >✏️</button>
                 <button
-                  *ngIf="editingFactId !== fact.id"
+                  *ngIf="editingFactId !== fact.id && userRole !== 'viewer'"
                   class="delete-fact-btn"
                   (click)="deleteFact(user.id, fact.id)"
                   title="Delete"
@@ -118,7 +118,7 @@
               </div>
             </div>
             <div *ngIf="!getProfessionalFacts(user.facts).length">No professional information.</div>
-            <div class="add-fact-container">
+            <div class="add-fact-container" *ngIf="userRole !== 'viewer'">
               <input
                 type="text"
                 [(ngModel)]="newProfessionalFact[user.id]"

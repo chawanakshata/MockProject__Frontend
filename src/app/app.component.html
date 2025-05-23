@@ -5,12 +5,24 @@
     <span></span>
     <span></span>
   </button>
-  <ul class="nav-list" [class.open]="showMenu">
+  <!-- <ul class="nav-list" [class.open]="showMenu">
     <li><a routerLink="/user-list" routerLinkActive="active">About Me</a></li>
     <li><a routerLink="/training-activities" routerLinkActive="active">Training Activities</a></li>
     <li><a routerLink="/training-team-selfies" routerLinkActive="active">Training Team Selfies</a></li>
     <li><a routerLink="/team-selfies" routerLinkActive="active">Team Selfies</a></li>
-  </ul>
+  </ul> -->
+  <div class="nav-left">
+    <a routerLink="/user-list" routerLinkActive="active">About Me</a>
+    <a routerLink="/training-activities" routerLinkActive="active">Training Activities</a>
+    <a routerLink="/training-team-selfies" routerLinkActive="active">Training Team Selfies</a>
+    <a routerLink="/team-selfies" routerLinkActive="active">Team Selfies</a>
+  </div>
+  <div class="nav-right">
+    <div class="session-username" *ngIf="sessionUsername">
+      {{ sessionUsername }}
+    </div>
+    <button mat-button color="warn" (click)="logout()">Logout</button>
+  </div>
 </nav>
 
 <!-- Main Content -->

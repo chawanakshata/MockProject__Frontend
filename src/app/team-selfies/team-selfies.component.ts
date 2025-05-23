@@ -18,6 +18,7 @@ import { API_ENDPOINTS } from '../api-endpoints';
 
 export class TeamSelfiesComponent implements OnInit {
   selfies: any[] = [];
+  userRole: string = ''; 
   isLoading = true; // Indicates whether the data is still being loaded
   carouselConfig = {
     dots: true, 
@@ -41,6 +42,7 @@ export class TeamSelfiesComponent implements OnInit {
   @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
 
   ngOnInit(): void {
+    this.userRole = sessionStorage.getItem('userRole') || '';
     this.isLoading = true; // Set loading state to true
     this.http.get<any[]>(API_ENDPOINTS.TEAM_SELFIES)
       .subscribe({
@@ -103,51 +105,6 @@ addSelfie() {
       }
     });
 }
-// addSelfie() {
-//   if (
-//     this.selectedFile &&
-//     this.teamMemberName.trim() &&
-//     (this.selectedFile.type === 'image/jpeg' || this.selectedFile.type === 'image/jpg')
-//   ) {
-//     const formData = new FormData(); // Creates a new FormData object to hold the file and team member name
-//     formData.append('File', this.selectedFile);
-//     formData.append('TeamMemberName', this.teamMemberName.trim());
-
-//     this.http.post<any>(API_ENDPOINTS.TEAM_SELFIES_UPLOAD, formData) // Sends a POST request to the API endpoint with the form data
-//       .subscribe({
-//         next: (newSelfie) => {  
-//           this.selfies = [...this.selfies, newSelfie]; // Adds the new selfie to the existing selfies array
-//           this.teamMemberName = ''; // Resets the team member name input
-//           this.selectedFile = null; // Resets the selected file
-//           this.selectedFileName = ''; // Resets the selected file name
-//           if (this.fileInput && this.fileInput.nativeElement) {  // Resets the file input element
-//             this.fileInput.nativeElement.value = '';
-//           }
-//           this.snackBar.open('Photo added successfully', 'Close', {
-//             duration: 4000,
-//             verticalPosition: 'bottom',
-//             panelClass: 'photo-snackbar'
-//           });
-//         },
-//         error: (err: any) => {
-//         // Show backend error message if available
-//         const errorMsg = err?.error?.Message || err?.error?.message || 'Failed to upload photo.';
-//         this.snackBar.open(errorMsg, 'Close', {
-//           duration: 4000,
-//           verticalPosition: 'bottom',
-//           panelClass: 'photo-snackbar'
-//         });
-//       }
-//       });
-//   } 
-//   else {
-//     this.snackBar.open('Please select a JPG/JPEG photo and enter team member\'s name', 'Close', {
-//       duration: 4000,
-//       verticalPosition: 'bottom',
-//       panelClass: 'photo-snackbar'
-//     });
-//   }
-// }
 
   deleteSelfie(id: number) {
     if (confirm('Are you sure you want to delete this selfie?')) {
@@ -176,6 +133,5 @@ addSelfie() {
   onCarouselAfterChange(event: any) {
     this.currentSlide = event.currentSlide || 0; // Sets the current slide index based on the event data
   }
-
   
 }

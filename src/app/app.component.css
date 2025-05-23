@@ -1,22 +1,24 @@
 .navbar {
+  display: flex;
+  justify-content: space-between; /* Space between nav-left and nav-right */
+  align-items: center; /* Align items vertically */
   background: #222629;
-  padding: 16px 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  padding: 16px 20px; /* Add padding for spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.nav-list {
+.nav-left {
   display: flex;
-  gap: 32px;
+  gap: 32px; /* Space between nav links */
   justify-content: center;
-  list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-list li a {
+.nav-left a {
   text-decoration: none;
   color: #fdfff9;
   font-weight: 500;
@@ -27,8 +29,8 @@
   position: relative; 
 }
 
-.nav-list li a.active::after,
-.nav-list li a:hover::after {
+.nav-left a.active::after,
+.nav-left a:hover::after {
   content: '';
   display: block;
   height: 4px;
@@ -90,6 +92,31 @@
   transition: 0.3s;
 }
 
+.nav-right {
+  margin-left: auto; 
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-right button {
+  color: white;
+  background-color: #c63833;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav-right button:hover {
+  background-color: #ab221d;
+}
+
+.session-username {
+  color: #8fc643;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
 
 @media (min-width: 1300px){
   .nav-list li a{
