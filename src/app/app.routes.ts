@@ -6,12 +6,10 @@ import { TeamSelfiesComponent } from './team-selfies/team-selfies.component';
 import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
-  //{ path: '', redirectTo: 'user-list', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'user-list', component: UserListComponent },
   { path: 'training-activities', component: TrainingActivitiesComponent },
   { path: 'training-team-selfies', component: TrainingTeamSelfiesComponent },
   { path: 'team-selfies', component: TeamSelfiesComponent },
-  //{ path: '**', redirectTo: 'user-list' },
   { path: '', redirectTo: 'login', pathMatch: 'full' }
 ];

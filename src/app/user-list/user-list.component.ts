@@ -17,8 +17,10 @@ import { API_ENDPOINTS } from '../api-endpoints';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']
 })
+
 export class UserListComponent implements OnInit {
   users$!: Observable<any>; // Observable of the API response
+  userRole: string = '';
   isLoading = true;
   carouselConfig = {
     dots: true, // Enables dots for navigation
@@ -46,7 +48,8 @@ export class UserListComponent implements OnInit {
   constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
-    this.getUsers();
+    this.userRole = sessionStorage.getItem('userRole') || '';
+    this.getUsers(); 
   }
 
   // Fetches users from the API and handles the response
@@ -204,6 +207,7 @@ export class UserListComponent implements OnInit {
     });
   }
 }
+
 }
 
 

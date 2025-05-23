@@ -1,20 +1,39 @@
+<div class="welcome-container">
+  <h1>My Deloitte Journey!</h1>
+  <h2>Please login to proceed.</h2>
+</div>
+
 <!-- Login Form -->
 <div *ngIf="!showSignup" class="login-form">
+  <div class="login-title">Login</div>
   <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <!-- Username Field -->
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
     <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Username</mat-label>
-      <input matInput name="username" [(ngModel)]="loginData.username" required>
+      <mat-label style="color: black;">Username</mat-label>
+      <input matInput name="username" [(ngModel)]="loginData.username" required (focus)="errorMessage = ''">
     </mat-form-field>
-
+    
+    <div *ngIf="passwordErrorMessage" class="error-message">{{ passwordErrorMessage }}</div>
+    <!-- Password Field -->
     <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Password</mat-label>
-      <input matInput name="password" [(ngModel)]="loginData.password" type="password" required>
+      <mat-label style="color: black;">Password</mat-label>
+      <input matInput [type]="hidePassword ? 'password' : 'text'" name="password" [(ngModel)]="loginData.password" required (focus)="passwordErrorMessage = ''">
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="togglePasswordVisibility(); $event.stopPropagation();"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hidePassword"
+        type="button"
+      >
+        <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
     </mat-form-field>
-
+    
+    <!-- Login Button -->
     <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">Login</button>
   </form>
-
-  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 
   <div class="signup-link">
     <span>Don't have an account?</span>
@@ -24,21 +43,24 @@
 
 <!-- Signup Form -->
 <div *ngIf="showSignup" class="signup-form">
+  <div class="login-title">Signup</div>
   <form (ngSubmit)="onSignup()" #signupForm="ngForm">
+    <div *ngIf="signUpErrorMessage" class="error-message">{{ signUpErrorMessage }}</div>
+    <!-- Username Field -->
     <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Username</mat-label>
-      <input matInput name="signupUsername" [(ngModel)]="signupData.username" required>
+      <mat-label style="color: black;">Username</mat-label>
+      <input matInput name="signupUsername" [(ngModel)]="signupData.username" required (focus)="signUpErrorMessage = ''">
     </mat-form-field>
-
+    
+    <div *ngIf="signUpPasswordErrorMessage" class="error-message">{{ signUpPasswordErrorMessage }}</div>
+    <!-- Password Field -->
     <mat-form-field appearance="fill" class="full-width">
-      <mat-label>Password</mat-label>
-      <input matInput name="signupPassword" [(ngModel)]="signupData.password" type="password" required>
+      <mat-label style="color: black;">Password</mat-label>
+      <input matInput name="signupPassword" [(ngModel)]="signupData.password" type="password" required (focus)="signUpPasswordErrorMessage = ''">
     </mat-form-field>
-
+    
+    <!-- Signup Button -->
     <button mat-raised-button color="accent" type="submit" [disabled]="isLoading">Register</button>
-    <button mat-button type="button" (click)="showSignup = false">Back to Login</button>
+    <button mat-button type="button" class="back-btn" (click)="showSignup = false">Back to Login</button>
   </form>
-
-  <div *ngIf="signupMessage" class="signup-message">{{ signupMessage }}</div>
-  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
 </div>

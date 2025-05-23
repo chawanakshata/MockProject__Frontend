@@ -45,8 +45,8 @@ body, .main-content{
 }
 
 .add-photo-container {
-  margin: 16px auto 0 auto;
-  margin-bottom: 60px;
+  margin: 4px auto 0 auto;
+  margin-bottom: 50px;
   width: fit-content; 
 }
 
@@ -103,7 +103,8 @@ body, .main-content{
 .selfie-carousel-container {
     max-width: 30%;
     max-height: 50%;
-    margin: 40px auto;
+    margin: 30px auto;
+    margin-bottom: 10px;
     padding-bottom: 30px;
   }
   
@@ -133,7 +134,7 @@ body, .main-content{
 
   .delete-btn {
     margin: 18px auto 0 auto;
-    margin-top: 50px;
+    margin-top: 35px;
     display: block;
     background: #86c232;
     color: #000;
@@ -185,3 +186,21 @@ body, .main-content{
   margin-top: 1px !important;
 }
 
+@media (max-width: 1024px) and (min-width: 768px) {
+  .selfie-carousel-container {
+    max-width: 50%; /* Adjust width for tablets */
+    max-height: 60%; /* Adjust height for tablets */
+    margin: 20px auto;
+    padding-bottom: 20px;
+  }
+}
+
+/* Phone mode (screens smaller than 768px) */
+@media (max-width: 768px) {
+  .selfie-carousel-container {
+    max-width: 55%; /* Adjust width for phones */
+    max-height: 65%; /* Adjust height for phones */
+    margin: 15px auto;
+    padding-bottom: 15px;
+  }
+}
