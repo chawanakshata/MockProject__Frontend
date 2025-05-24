@@ -1,7 +1,3 @@
-  body, .main-content{
-    padding-bottom: 0px; 
-  }
-
 .main-title {
   text-align: center;
   margin-bottom: 24px;
@@ -9,44 +5,43 @@
   font-weight: 550;
 }
 
- .selfie-carousel-container {
-    max-width: 30%;
-    max-height: 50%;
-    margin: 40px auto;
-    padding-bottom: 30px;
-    background: #f9f9f9 !important;
-  }
+.selfie-carousel-container {
+   max-width: 30%;
+  max-height: 50%;
+  margin: 40px auto;
+  padding-bottom: 30px;
+   background: #f9f9f9 !important;
+}
 
-  .carousel-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.carousel-item {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
   
-  .carousel-image {
-    width: 100%;
-    max-width: 90%;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
+.carousel-image {
+   width: 100%;
+   max-width: 90%;
+   height: 50%;
+   object-fit: cover;
+   border-radius: 12px;
+   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
   
-  .team-member-name {
-    margin-top: 12px;
-    font-size: 1.2em;
-    font-weight: 550;
-    color: #c62e2e;
-    text-align: center;
-  }
+.team-member-name {
+   margin-top: 12px;
+   font-size: 1.2em;
+   font-weight: 550;
+   color: #c62e2e;
+   text-align: center;
+}
 
 .loader-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 260px;
- 
 }
 
 ::ng-deep .slick-dots {

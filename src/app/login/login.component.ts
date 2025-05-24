@@ -83,7 +83,13 @@ onSubmit() {
       },
       error: (err) => {
         this.isLoading = false;
-        this.errorMessage = err?.error?.message || 'Invalid username or password.';
+        const errorMessage = err?.error?.message || 'Invalid username or password.';
+        this.snackBar.open(errorMessage, 'Close', {
+          duration: 3000, // Snackbar will be visible for 3 seconds
+          verticalPosition: 'bottom', // Position at the bottom
+          horizontalPosition: 'center', // Center horizontally
+          panelClass: ['error-snackbar'] // Optional: Add a custom class for styling
+        });
       }
     });
 }

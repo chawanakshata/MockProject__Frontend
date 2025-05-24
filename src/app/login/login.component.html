@@ -1,13 +1,13 @@
-<div class="welcome-container">
+<!-- <div class="welcome-container">
   <h1>My Deloitte Journey!</h1>
   <h2>Please login to proceed.</h2>
-</div>
+</div> -->
 
 <!-- Login Form -->
-<div *ngIf="!showSignup" class="login-form">
+<!-- <div *ngIf="!showSignup" class="login-form">
   <div class="login-title">Login</div>
   <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-    <!-- Username Field -->
+    
     <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
     <mat-form-field appearance="fill" class="full-width">
       <mat-label style="color: black;">Username</mat-label>
@@ -15,7 +15,6 @@
     </mat-form-field>
     
     <div *ngIf="passwordErrorMessage" class="error-message">{{ passwordErrorMessage }}</div>
-    <!-- Password Field -->
     <mat-form-field appearance="fill" class="full-width">
       <mat-label style="color: black;">Password</mat-label>
       <input matInput [type]="hidePassword ? 'password' : 'text'" name="password" [(ngModel)]="loginData.password" required (focus)="passwordErrorMessage = ''">
@@ -31,7 +30,6 @@
       </button>
     </mat-form-field>
     
-    <!-- Login Button -->
     <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">Login</button>
   </form>
 
@@ -39,28 +37,94 @@
     <span>Don't have an account?</span>
     <button mat-button type="button" class="signup-btn" (click)="showSignup = true">Sign up</button>
   </div>
-</div>
+</div> -->
 
 <!-- Signup Form -->
-<div *ngIf="showSignup" class="signup-form">
+<!-- <div *ngIf="showSignup" class="signup-form">
   <div class="login-title">Signup</div>
   <form (ngSubmit)="onSignup()" #signupForm="ngForm">
     <div *ngIf="signUpErrorMessage" class="error-message">{{ signUpErrorMessage }}</div>
-    <!-- Username Field -->
+
     <mat-form-field appearance="fill" class="full-width">
       <mat-label style="color: black;">Username</mat-label>
       <input matInput name="signupUsername" [(ngModel)]="signupData.username" required (focus)="signUpErrorMessage = ''">
     </mat-form-field>
     
     <div *ngIf="signUpPasswordErrorMessage" class="error-message">{{ signUpPasswordErrorMessage }}</div>
-    <!-- Password Field -->
     <mat-form-field appearance="fill" class="full-width">
       <mat-label style="color: black;">Password</mat-label>
       <input matInput name="signupPassword" [(ngModel)]="signupData.password" type="password" required (focus)="signUpPasswordErrorMessage = ''">
     </mat-form-field>
     
-    <!-- Signup Button -->
     <button mat-raised-button color="accent" type="submit" [disabled]="isLoading">Register</button>
     <button mat-button type="button" class="back-btn" (click)="showSignup = false">Back to Login</button>
   </form>
+</div> -->
+
+<div class="container">
+  <!-- Left Panel -->
+  <div class="left-panel">
+    <div class="overlay">
+      <div class="content">
+        <h1>MY DELOITTE JOURNEY!</h1>
+        <h2>Welcome to my First Web-App.</h2>
+        <p>This web-app features information about me, details of the training activities I’ve completed since joining, and photos with my training team members and project team members.</p>
+        <h2>Please Login to proceed... </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right Panel -->
+<div class="right-panel">
+  <!-- Login Form -->
+  <div *ngIf="!showSignup" class="form-container">
+    <div class="login-title">Login</div>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label style="color: black;">Username</mat-label>
+        <input matInput name="username" [(ngModel)]="loginData.username" required (focus)="errorMessage = ''">
+      </mat-form-field>
+      <div *ngIf="passwordErrorMessage" class="error-message">{{ passwordErrorMessage }}</div>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label style="color: black;">Password</mat-label>
+        <input matInput [type]="hidePassword ? 'password' : 'text'" name="password" [(ngModel)]="loginData.password" required (focus)="passwordErrorMessage = ''">
+        <button mat-icon-button matSuffix (click)="togglePasswordVisibility(); $event.stopPropagation();" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword" type="button">
+          <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="isLoading">Login</button>
+    </form>
+    <div class="divider"><span>or</span></div>
+    <div class="signup-link">
+      <span>Don't have an account?</span>
+      <button mat-button type="button" class="signup-btn" (click)="showSignup = true">Sign up</button>
+    </div>
+  </div>
+
+  <!-- Signup Form -->
+  <div *ngIf="showSignup" class="form-container">
+    <div class="login-title">Signup</div>
+    <form (ngSubmit)="onSignup()" #signupForm="ngForm">
+      <div *ngIf="signUpErrorMessage" class="error-message">{{ signUpErrorMessage }}</div>
+      <mat-form-field appearance="fill" class="full-width">
+      <mat-label style="color: black;">Username</mat-label>
+      <input matInput name="signupUsername" [(ngModel)]="signupData.username" required (focus)="signUpErrorMessage = ''">
+    </mat-form-field>
+    
+    <div *ngIf="signUpPasswordErrorMessage" class="error-message">{{ signUpPasswordErrorMessage }}</div>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label style="color: black;">Password</mat-label>
+      <input matInput name="signupPassword" [(ngModel)]="signupData.password" type="password" required (focus)="signUpPasswordErrorMessage = ''">
+    </mat-form-field>
+      <button mat-raised-button color="accent" type="submit" [disabled]="isLoading">Register</button>
+      <div class="divider"><span>or</span></div>
+      <div class="signup-link">
+        <span>Already have an account?</span>
+        <button mat-button type="button" class="signup-btn" (click)="showSignup = false">Sign in</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 </div>
