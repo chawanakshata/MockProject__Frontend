@@ -181,15 +181,15 @@ body, .main-content{
 }
 
 ::ng-deep .slick-dots {
-  position: relative !important;
-  bottom: 0px !important;
-  margin-top: 1px !important;
+  position: relative; 
+  bottom: 0px; 
+  margin-top: 1px;
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .selfie-carousel-container {
-    max-width: 50%; /* Adjust width for tablets */
-    max-height: 60%; /* Adjust height for tablets */
+    max-width: 40%; 
+    max-height: 50%; 
     margin: 20px auto;
     padding-bottom: 20px;
   }
@@ -198,8 +198,8 @@ body, .main-content{
 /* Phone mode (screens smaller than 768px) */
 @media (max-width: 768px) {
   .selfie-carousel-container {
-    max-width: 55%; /* Adjust width for phones */
-    max-height: 65%; /* Adjust height for phones */
+    max-width: 55%; 
+    max-height: 65%; 
     margin: 15px auto;
     padding-bottom: 15px;
   }

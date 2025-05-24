@@ -29,48 +29,47 @@
 .activities-main-container {
   padding: 24px;
   padding-bottom: 60px;
-  background: #f9f9f9 !important;
+  background: #f9f9f9 ;
 }
 
 .activities-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    padding: 24px;
-    justify-content: flex-start;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px;
+  justify-content: flex-start;
+}
 
-  .activity-card {
-    min-width: 20%;
-    max-width: 20%;
-    background: #e0e0e0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 18px 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-    text-align: center;
-    gap: 8px;
-    font-size: 1em;
-  }
+.activity-card {
+  min-width: 20%;
+  max-width: 20%;
+  background: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  text-align: center;
+  gap: 8px;
+  font-size: 1em;
+}  
   
-  .activity-date {
-    font-weight: bold;
-    color: #222629;
-    font-size: 1.1em;
-  }
+.activity-date {
+  font-weight: bold;
+  color: #222629;
+  font-size: 1.1em;
+}
   
-  .activity-desc {
-    font-size: 1.1em; 
-    color : #a72828;
-  }
+.activity-desc {
+  font-size: 1.1em; 
+  color : #a72828;
+}
   
-  .activity-day {
-    color: #474b4f;
-    font-weight: 550;
-  }
-
+.activity-day {
+  color: #474b4f;
+  font-weight: 550;
+}
 
 @media (max-width: 600px) {
   .activity-card {

@@ -1,9 +1,8 @@
 body, .main-content {
   padding-bottom: 50px; 
-  
 }
 
- .user-list-container, .main-content {
+.user-list-container, .main-content {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
@@ -11,7 +10,7 @@ body, .main-content {
   padding: 0 16px;
 }
 
- .user-card {
+.user-card {
   display: flex;
   flex-direction: row;
   gap: 4%;
@@ -25,7 +24,7 @@ body, .main-content {
   justify-content: center;
 }
 
- .user-content {
+.user-content {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -60,7 +59,6 @@ mat-tab-group {
   font-size: 1.1rem;
 }
 
-
 .profile-picture {
   width: 120px;
   height: 120px;
@@ -90,7 +88,6 @@ mat-tab-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .profile-info h2 {
@@ -230,7 +227,6 @@ mat-tab-group {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 .slick-dots {
   position: absolute;
   left: 0;
@@ -242,7 +238,6 @@ mat-tab-group {
   pointer-events: auto;
   background: transparent;
 }
-
 
 .slick-dots li button:before {
   font-size: 16px;
@@ -353,7 +348,6 @@ mat-tab-group {
   border-radius: 4px;
 }
 
-
 ::ng-deep .photo-snackbar .mat-mdc-button {
   color: #fff !important;
   background: transparent !important;
@@ -366,7 +360,6 @@ mat-tab-group {
   background: #559201 !important;
   color: #fff !important;
 }
-
 
 ::ng-deep .photo-snackbar,
 ::ng-deep .photo-snackbar .mdc-snackbar__surface {
@@ -415,26 +408,26 @@ mat-tab-group {
     font-size: 1.6rem !important;
   }
 
-.user-content{
-  padding: 0px;
-}
+  .user-content{
+    padding: 0px;
+  }
 
-.left-section{
-  margin-top: 4%;
-  margin-bottom: 4%;
-  padding-left: 5%;
-  gap: 3%;
-  padding-top: 0px;
-}
+  .left-section{
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding-left: 5%;
+    gap: 3%;
+    padding-top: 0px;
+  }
 
-.profile-picture {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #4b4b4b;
-  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
-}
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #4b4b4b;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (min-width: 1300px){

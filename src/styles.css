@@ -4,4 +4,48 @@ body {
     background: #f9f9f9 !important;
   }
 
-
+/* Define CSS variables in :root for global access */
+:root {
+  /* Color palette */
+  --color-primary: #86c232;
+  --color-primary-hover: #75ac27;
+  --color-primary-light: #9ede44;
+  --color-danger: #ce4135;
+  --color-danger-hover: #c12d25;
+  --color-dark: #222629;
+  --color-text-light: #fff;
+  --color-text-dark: #111;
+  --color-error: rgb(184, 36, 36);
+  --color-background-light: #f7f7f7c3;
+  --color-overlay: rgba(19, 19, 19, 0.53);
+  
+  /* Spacing system */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Border radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  
+  /* Typography */
+  --font-size-sm: 0.95rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.2rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2.5rem;
+  
+  /* Font weights */
+  --font-weight-normal: 500;
+  --font-weight-bold: 600;
+  --font-weight-extra-bold: bold;
+  
+  /* Effects */
+  --transition-standard: background 0.2s;
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 6px 10px rgba(0, 0, 0, 0.13);
+  --shadow-lg: 0 4px 24px rgba(34, 38, 41, 0.07);
+}
