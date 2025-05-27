@@ -119,25 +119,23 @@
 }
 
 @media (min-width: 1300px){
-  .nav-list li a{
-     font-size: 1.55em;
-  }
-
   .footer {
     font-size: 1.55em;
     padding: 20px 0 14px 0;
     position: static;
   }
-  
+  .nav-left a{
+    font-size: 1.55em;
+  }
 }
 
 @media (max-width: 768px) {
   .menu-toggle {
-    display: flex; /* Show the menu toggle button */
+    display: flex; 
   }
 
   .nav-left {
-    display: none; /* Hide the menu by default */
+    display: none; 
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -149,7 +147,7 @@
   }
 
   .nav-left.show {
-    display: flex; /* Show the menu when toggled */
+    display: flex; 
   }
 
   .nav-left a {
@@ -158,7 +156,7 @@
   }
 
   .nav-right {
-    order: 1; /* Move username and logout to the right */
+    order: 1; 
   }
 }
 

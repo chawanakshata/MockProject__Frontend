@@ -91,24 +91,6 @@ button[type="submit"]:hover {
   background: #c12d25 !important;
 }
 
-@media (max-width: 768px) {
-
-  .login-title {
-    font-size: 18px; 
-    margin-bottom: 5%; 
-  }
-
-  button[type="submit"] {
-    padding: 0.5rem 1.5rem; 
-    font-size: 14px; 
-  }
-
-  .signup-btn, .back-btn {
-    font-size: 14px;
-    padding: 4px 8px; 
-  }
-}
-
 body, html {
   height: 100%;
   margin: 0;
@@ -194,7 +176,7 @@ body, html {
 
 .right-panel {
   flex: 1;
-  background: #f7f7f7c3;
+  background: linear-gradient(#2b2b2bfd, #b0b0b0, #2b2b2bfd);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,24 +216,6 @@ body, html {
 
 .checkbox-container input[type="checkbox"] {
   margin-right: 8px;
-}
-
-.signup-button {
-  width: 100%;
-  padding: 11px 0;
-  background: #9ede44;
-  color: #222629;
-  border: none;
-  border-radius: 6px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  margin-bottom: 16px;
-  transition: background 0.2s;
-}
-
-.signup-button:hover {
-  background: #86c232;
 }
 
 .divider {
@@ -304,5 +268,16 @@ body, html {
   }
   .form-container {
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 1700px) {
+  .right-panel {
+    padding: 60px 0;
+  }
+  .form-container {
+    max-width: 420px;
+    padding: 48px 40px 32px 40px;
+    font-size: 1.15rem;
   }
 }
