@@ -52,8 +52,8 @@
  
 @media (max-width: 768px) {
   .selfie-carousel-container {
-    max-width: 55%; /* Adjust width for phones */
-    max-height: 65%; /* Adjust height for phones */
+    max-width: 55%; 
+    max-height: 65%; 
     margin: 15px auto;
     padding-bottom: 15px;
   }
